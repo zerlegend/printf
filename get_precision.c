@@ -35,12 +35,10 @@ int get_precision(const char *format, int *i, va_list list)
 		else
 			break;
 	}
+	if(precision < 0) precision = 0;
+	 *i = curr_i - 1;
 
 	*i = curr_i - 1;
 
 	return (precision);
-}
-int is_digit(char c)
-{
-	return (c >= '0' && c <= '9');
 }
